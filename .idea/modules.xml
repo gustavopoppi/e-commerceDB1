@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sistemaservico.iml" filepath="$PROJECT_DIR$/.idea/sistemaservico.iml" />
+      <module fileurl="file://$PROJECT_DIR$/back/back.iml" filepath="$PROJECT_DIR$/back/back.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ecommerceDB1.iml" filepath="$PROJECT_DIR$/.idea/ecommerceDB1.iml" />
     </modules>
   </component>
 </project>
