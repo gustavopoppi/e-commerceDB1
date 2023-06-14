@@ -21,6 +21,7 @@ public class ProdutoController {
 
     @PostMapping
     @Transactional
+    @CrossOrigin("http://localhost:3000")
     public ResponseEntity<Produto> insereProduto(@RequestBody @Valid DadosProduto dados, UriComponentsBuilder uriBuilder){
         //TODO GUSTAVO se tentar inserir o mesmo produto é para aumentar o estoque ? porém e se o preço for diferente?
         Produto produto = produtoService.insereProduto(dados);
