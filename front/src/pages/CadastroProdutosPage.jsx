@@ -1,4 +1,4 @@
-import Formulario from "../componentes/Conteudo/Produtos/Formulario"
+import Formulario from "../componentes/Conteudo/Formulario"
 
 function CadastroProdutosPage() {
     return (
