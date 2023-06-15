@@ -21,6 +21,7 @@ public class ProdutoController {
 
     @PostMapping
     @Transactional
+    @CrossOrigin("http://localhost:3000")
     public ResponseEntity<Produto> insereProduto(@RequestBody @Valid DadosProduto dados, UriComponentsBuilder uriBuilder){
         //TODO GUSTAVO se tentar inserir o mesmo produto é para aumentar o estoque ? porém e se o preço for diferente?
         Produto produto = produtoService.insereProduto(dados);
@@ -30,23 +31,27 @@ public class ProdutoController {
     }
 
     @GetMapping("{id}")
+    @CrossOrigin("http://localhost:3000")
     public ResponseEntity<Produto> detalhaProduto(@PathVariable Long id){
         return ResponseEntity.ok(produtoService.detalhaFuncionario(id));
     }
 
     @GetMapping
+    @CrossOrigin("http://localhost:3000")
     public ResponseEntity<List<Produto>> listaTodosProdutos(){
         return ResponseEntity.ok(produtoService.listaTodosProdutos());
     }
 
     @PutMapping
     @Transactional
+    @CrossOrigin("http://localhost:3000")
     public ResponseEntity<Produto> atualizaProduto(@RequestBody @Valid DadosProduto dados){
         return ResponseEntity.ok(produtoService.atualizaProduto(dados));
     }
 
     @DeleteMapping("{id}")
     @Transactional
+    @CrossOrigin("http://localhost:3000")
     public ResponseEntity<Produto> excluiProduto(@PathVariable Long id){
         produtoService.excluirFuncionario(id);
         return ResponseEntity.ok().build();
