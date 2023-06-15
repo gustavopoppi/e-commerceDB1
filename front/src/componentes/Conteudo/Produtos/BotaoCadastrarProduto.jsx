@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 function ListaCadastrarProduto() {
     return (
         <div className='d-flex justify-content-between mb-2'>
-            <h2>Lista de Produtos</h2>
-            <button className='btn btn-primary'><Link to="/cadastroProdutos">Cadastrar Produto</Link></button>
+            <h1>Lista de Produtos Cadastrados</h1>
+            <Link to="/cadastroProdutos"><button className='btn btn-primary'>Cadastrar Produto</button></Link>
         </div>
     )
 }

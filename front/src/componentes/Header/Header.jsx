@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-
+import { FaShoppingCart } from "react-icons/fa";
 import { HeaderContainer } from './HeaderStyled'
 
 function Header() {
@@ -13,10 +13,9 @@ function Header() {
                 <nav>
                     <ul>
                         <li><Link to="/"><a>Home</a></Link></li>
-                        <li><Link to="/cadastroProdutos">Produtos</Link></li>
+                        <li><Link to={"/carrinho"}><FaShoppingCart/></Link></li>                                                
                     </ul>
                 </nav>
-
             </div>
         </HeaderContainer>
     )
