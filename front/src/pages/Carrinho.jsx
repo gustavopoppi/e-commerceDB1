@@ -17,15 +17,15 @@ function Carrinho() {
     useEffect(() => {
         axios.get("http://localhost:8080/carrinho").then(carrinho => {
             setProdutosCarrinho(carrinho.data)
-
+            atualizaValorPelaTotalPelaRequisicao(true)
         });
-        atualizaValorTotal()
     }, [atualizar])
 
     function excluir(id) {
-        axios.delete('http://localhost:8080/carrinho/' + id).then(carrinho => {
+        axios.delete('http://localhost:8080/carrinho/' + id).then(carrinho => {            
             setAtualizar(carrinho)
         });
+        atualizaValorPelaTotalPelaRequisicao(true)
     }
 
     //TODO GUSTAVO REFATORAR ESSE CÓDUIGO TODO, ESTÁ IGUAL A DO CARDPRODUTO
@@ -44,27 +44,29 @@ function Carrinho() {
         carrinho.quantidade = event.target.value;
         carrinho.valorTotal = carrinho.produto.preco * carrinho.quantidade;
 
-
-        atualizaValorTotal()
+        atualizaValorPelaTotalPelaRequisicao(false)
     };
 
-    function atualizaValorTotal() {
-        produtosCarrinho.map(result => totalCarrinho += result.valorTotal);
-        setValorTotalCarrinho(totalCarrinho);
+    function atualizaValorPelaTotalPelaRequisicao(atualizaPelaRequisicao) {
+        if (atualizaPelaRequisicao) {
+            axios.get("http://localhost:8080/carrinho").then(carrinho => {
+                carrinho.data.map(result => totalCarrinho += result.valorTotal)
+                setValorTotalCarrinho(totalCarrinho)
+            })
+        }
+        else {
+            produtosCarrinho.map(result => totalCarrinho += result.valorTotal);
+            setValorTotalCarrinho(totalCarrinho);
+        }
     }
 
     function finalizarCompra() {
         produtosCarrinho.map(produto => {
-            axios.post('http://localhost:8080/compra/', produto).then(                
-                navigate('/compraFinalizada')
+            axios.post('http://localhost:8080/compra/', produto).then(
+                console.log()
+                // navigate('/compraFinalizada')
             )
         })
-
-        // axios.post('http://localhost:8080/compra/', produtosCarrinho).then(resultado => {
-        //     setAtualizar(resultado)
-        //     console.log(resultado)
-        //     navigate('/');
-        // });
     }
 
     return (
@@ -73,7 +75,7 @@ function Carrinho() {
                 <h1>Lista de Produtos Cadastrados</h1>
                 <div>
                     <p>Valor Total: R$ {valorTotalCarrinho}</p>
-                    <button onClick={() => finalizarCompra()} className='btn btn-primary'>Finalizar Compra</button>
+                    <button onClick={() => finalizarCompra()} className='btn btn-primary'>Finalizar</button>
                 </div>
             </div>
             <div className="card-container">
