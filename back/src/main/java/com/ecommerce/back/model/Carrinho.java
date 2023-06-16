@@ -1,7 +1,5 @@
 package com.ecommerce.back.model;
 
-
-import com.ecommerce.back.dto.DadosProduto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,13 +11,17 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Produto {
+public class Carrinho {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String nome;
-    private Double preco;
     private Integer quantidade;
-    private String imagem;
+
+    @Column(name = "valor_total")
+    private Double valorTotal;
+
+    @ManyToOne()
+    private Produto produto;
 }

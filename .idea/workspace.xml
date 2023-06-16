@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a004cf59-bc94-491f-8cc2-c41f4017e02e" name="Changes" comment="">
+    <list default="true" id="a004cf59-bc94-491f-8cc2-c41f4017e02e" name="Changes" comment="[DEV] Front-end e Back-end&#10;&#10;- FRONT: Altera card de produtos e implementa página de carrinho;&#10;- BACK: Adicionar carrinho controller, service, model e repository;">
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/CarrinhoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/dto/DadosCarrinho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Carrinho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/repository/CarrinhoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CarrinhoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Conteudo/Conteudo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/componentes/Conteudo/Conteudo.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Conteudo/Produtos/BotaoCadastrarProduto.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Conteudo/Produtos/CardProdutos.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Conteudo/Produtos/Formulario.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/pages/CadastroProdutosPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/CadastroProdutosPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/ProdutoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/ProdutoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/componentes/Conteudo/CardProdutos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/componentes/Conteudo/CardProdutos.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/pages/Carrinho.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/Carrinho.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +34,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="2RAshOB9uk7v1WU3tF7w3wIzBTl" />
   <component name="ProjectViewState">
@@ -60,6 +73,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.ecommerce.back.dto" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ecommerce.back.repository" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="BackApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -80,7 +96,7 @@
       <updated>1686704338820</updated>
       <workItem from="1686704340734" duration="4412000" />
       <workItem from="1686753845389" duration="10918000" />
-      <workItem from="1686846115172" duration="1212000" />
+      <workItem from="1686846115172" duration="15803000" />
     </task>
     <task id="LOCAL-00001" summary="Altera projeto para maven">
       <created>1686704463077</created>
@@ -131,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686793544374</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="[DEV] Front-end&#10;- Refatora local de arquivos;&#10;- Adicona página de carrinho;&#10;- Adiciona botão adicionar ao carrinho e dropdown de quantidade;">
+      <created>1686853303478</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686853303478</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +180,7 @@
     <MESSAGE value="[DEV] Inicializa React" />
     <MESSAGE value="[DEV] Front-end&#10;- Cria todas páginas de front-end;&#10;- Adiciona formulário do Produto;&#10;- Lógica para inserir produto no banco;" />
     <MESSAGE value="[DEV] Front-end&#10;- Adiciona react-icons;&#10;- Adicona exclusão Produto;&#10;- Adiciona Alteração Produto;&#10;- Adiciona página carrinho de compras;" />
-    <option name="LAST_COMMIT_MESSAGE" value="[DEV] Front-end&#10;- Adiciona react-icons;&#10;- Adicona exclusão Produto;&#10;- Adiciona Alteração Produto;&#10;- Adiciona página carrinho de compras;" />
+    <MESSAGE value="[DEV] Front-end&#10;- Refatora local de arquivos;&#10;- Adicona página de carrinho;&#10;- Adiciona botão adicionar ao carrinho e dropdown de quantidade;" />
+    <option name="LAST_COMMIT_MESSAGE" value="[DEV] Front-end&#10;- Refatora local de arquivos;&#10;- Adicona página de carrinho;&#10;- Adiciona botão adicionar ao carrinho e dropdown de quantidade;" />
   </component>
 </project>
