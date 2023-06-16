@@ -1,5 +1,5 @@
-import CardProdutos from "./Produtos/CardProdutos"
-import BotaoCadastrarProdutos from "./Produtos/BotaoCadastrarProduto"
+import CardProdutos from "./CardProdutos"
+import BotaoCadastrarProdutos from "./BotaoCadastrarProduto"
 
 function Conteudo() {
     return (

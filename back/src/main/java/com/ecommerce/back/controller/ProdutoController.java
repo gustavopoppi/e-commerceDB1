@@ -53,7 +53,7 @@ public class ProdutoController {
     @Transactional
     @CrossOrigin("http://localhost:3000")
     public ResponseEntity<Produto> excluiProduto(@PathVariable Long id){
-        produtoService.excluirFuncionario(id);
+        produtoService.excluirProduto(id);
         return ResponseEntity.ok().build();
     }
 }
