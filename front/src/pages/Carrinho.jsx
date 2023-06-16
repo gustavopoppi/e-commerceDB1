@@ -28,7 +28,6 @@ function Carrinho() {
         atualizaValorPelaTotalPelaRequisicao(true)
     }
 
-    //TODO GUSTAVO REFATORAR ESSE CÓDUIGO TODO, ESTÁ IGUAL A DO CARDPRODUTO
     function getQuantidadeEstoqueProduto(produto) {
         const result = [];
 
@@ -63,16 +62,15 @@ function Carrinho() {
     function finalizarCompra() {
         produtosCarrinho.map(produto => {
             axios.post('http://localhost:8080/compra/', produto).then(
-                console.log()
-                // navigate('/compraFinalizada')
+                navigate('/compraFinalizada')
             )
         })
     }
 
     return (
         <CardProdutosContainer>
-            <div className='d-flex justify-content-between mb-2'>
-                <h1>Lista de Produtos Cadastrados</h1>
+            <div className='d-flex justify-content-between mb-2 p-5'>
+                <h1>Carrinho:</h1>
                 <div>
                     <p>Valor Total: R$ {valorTotalCarrinho}</p>
                     <button onClick={() => finalizarCompra()} className='btn btn-primary'>Finalizar</button>

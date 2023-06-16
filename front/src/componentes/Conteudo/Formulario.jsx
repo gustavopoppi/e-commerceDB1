@@ -31,7 +31,7 @@ function Formulario() {
         produto.nome = data.nome;
         produto.preco = data.preco;
         produto.quantidade = data.quantidade;
-        produto.imagem = data.imagem[0].name
+        produto.imagem = 'imagem'/*data.imagem[0].name*/
         
         axios.post('http://localhost:8080/produtos', produto).then(result => {
             navigate('/');
@@ -39,7 +39,7 @@ function Formulario() {
     }
 
     return (
-        <div className="container">
+        <div className="container p-5">
             <h1>Cadastrar Produto</h1>
             <form onSubmit={onSubmit(handleSubmit)}>
                 <div className="col-6">

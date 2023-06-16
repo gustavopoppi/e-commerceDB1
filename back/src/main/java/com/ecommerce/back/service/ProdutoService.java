@@ -1,5 +1,6 @@
 package com.ecommerce.back.service;
 
+import com.ecommerce.back.comuns.Consultas;
 import com.ecommerce.back.dto.DadosProduto;
 import com.ecommerce.back.model.Carrinho;
 import com.ecommerce.back.model.Compra;
@@ -42,8 +43,7 @@ public class ProdutoService {
 
 
     public Produto atualizaProduto(DadosProduto dados) {
-        //TODO GUSTAVO verificar se é possivel dar entrada de dados de um funcionário que não existe, caso de preciso proteger dessa situação
-        Produto produto = buscaProduto(dados.id());
+        Produto produto = Consultas.buscaProduto(produtoRepository, dados.id());
         produto.setNome(dados.nome());
         produto.setPreco(dados.preco());
         produto.setQuantidade(dados.quantidade());
@@ -57,20 +57,11 @@ public class ProdutoService {
             findCompraByProdutoId(id).forEach(compra -> compraRepository.delete(compra));
         }
 
-        produtoRepository.delete(buscaProduto(id));
+        produtoRepository.delete(Consultas.buscaProduto(produtoRepository, id));
     }
 
     public Produto detalhaFuncionario(Long id) {
-        return buscaProduto(id);
-    }
-
-
-    private Carrinho buscaCarrinho(Long id) {
-        return carrinhoRepository.findById(id).get();
-    }
-
-    private Produto buscaProduto(Long id) {
-        return produtoRepository.findById(id).get();
+        return Consultas.buscaProduto(produtoRepository, id);
     }
 
     private boolean produtoEstaNoCarrinho(Long id) {

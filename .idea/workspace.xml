@@ -5,18 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a004cf59-bc94-491f-8cc2-c41f4017e02e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/comuns/Consultas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Conteudo/CardProdutos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/componentes/Conteudo/CardProdutos.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Conteudo/Formulario.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/componentes/Conteudo/Formulario.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/componentes/Header/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Header/HeaderStyled.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/componentes/Header/HeaderStyled.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Header/IconesHeader/IconesHeader.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Header/TextoHeader/TextoHeader.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/componentes/Header/TextoHeader/TextoHeader.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/ProdutoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CarrinhoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CarrinhoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CompraService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CompraService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/ProdutoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/pages/Carrinho.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/Carrinho.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/pages/EditarProdutoPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/EditarProdutoPage.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

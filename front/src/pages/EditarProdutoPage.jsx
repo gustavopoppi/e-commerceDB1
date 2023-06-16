@@ -26,8 +26,6 @@ function Produto() {
             navigate('/');
         });
     }
-
-    // TODO GUSTAVO código mto parecido com o Formulário, depois ver o que da para refatorar;
     
     return (
         <div className="container">
