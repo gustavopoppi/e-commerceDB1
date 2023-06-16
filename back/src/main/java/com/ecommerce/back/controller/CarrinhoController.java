@@ -29,12 +29,6 @@ public class CarrinhoController {
         return ResponseEntity.created(uri).body(produtoCarrinho);
     }
 
-//    @GetMapping("{id}")
-//    @CrossOrigin("http://localhost:3000")
-//    public ResponseEntity<Carrinho> detalhaCarrinho(@PathVariable Long id){
-//        return ResponseEntity.ok(carrinhoService.detalhaCarrinho(id));
-//    }
-
     @GetMapping
     @CrossOrigin("http://localhost:3000")
     public ResponseEntity<List<Carrinho>> listaTodosProdutosDoCarrinho(){

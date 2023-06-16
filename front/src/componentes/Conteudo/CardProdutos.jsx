@@ -28,7 +28,6 @@ function CardProdutos() {
             produto.opcaoSelecionada = 1;
 
         produto.idProduto = produto.id;
-        produto.produto = produto;
         produto.valorTotal = produto.preco * produto.opcaoSelecionada;
         produto.quantidade = produto.opcaoSelecionada;
         axios.post('http://localhost:8080/carrinho', produto).then(result => {

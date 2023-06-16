@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a004cf59-bc94-491f-8cc2-c41f4017e02e" name="Changes" comment="[DEV] Front-end e Back-end&#10;&#10;- FRONT: Altera card de produtos e implementa página de carrinho;&#10;- BACK: Adicionar carrinho controller, service, model e repository;">
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/CarrinhoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/dto/DadosCarrinho.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Carrinho.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/repository/CarrinhoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CarrinhoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a004cf59-bc94-491f-8cc2-c41f4017e02e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/CompraController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Compra.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/StatusCarrinho.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/repository/CompraRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CompraService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/ProdutoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/ProdutoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Produto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/CarrinhoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/CarrinhoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/dto/DadosCarrinho.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/dto/DadosCarrinho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Carrinho.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/model/Carrinho.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/repository/CarrinhoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/repository/CarrinhoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CarrinhoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/CarrinhoService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/ProdutoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/service/ProdutoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/Rotas.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/Rotas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/componentes/Conteudo/CardProdutos.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/componentes/Conteudo/CardProdutos.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/pages/Carrinho.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/pages/Carrinho.jsx" afterDir="false" />
     </list>
@@ -27,8 +30,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -74,6 +77,7 @@
       <recent name="com.ecommerce.back.dto" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ecommerce.back.model" />
       <recent name="com.ecommerce.back.repository" />
     </key>
   </component>
@@ -96,7 +100,7 @@
       <updated>1686704338820</updated>
       <workItem from="1686704340734" duration="4412000" />
       <workItem from="1686753845389" duration="10918000" />
-      <workItem from="1686846115172" duration="15803000" />
+      <workItem from="1686846115172" duration="21097000" />
     </task>
     <task id="LOCAL-00001" summary="Altera projeto para maven">
       <created>1686704463077</created>
@@ -154,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686853303478</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="[DEV] Front-end e Back-end&#10;&#10;- FRONT: Altera card de produtos e implementa página de carrinho;&#10;- BACK: Adicionar carrinho controller, service, model e repository;&#10;- BACK: Implementa exclusão de carrinho se for deletar um produto que esteja no carrinho;">
+      <created>1686873694428</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686873694428</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +192,18 @@
     <MESSAGE value="[DEV] Front-end&#10;- Cria todas páginas de front-end;&#10;- Adiciona formulário do Produto;&#10;- Lógica para inserir produto no banco;" />
     <MESSAGE value="[DEV] Front-end&#10;- Adiciona react-icons;&#10;- Adicona exclusão Produto;&#10;- Adiciona Alteração Produto;&#10;- Adiciona página carrinho de compras;" />
     <MESSAGE value="[DEV] Front-end&#10;- Refatora local de arquivos;&#10;- Adicona página de carrinho;&#10;- Adiciona botão adicionar ao carrinho e dropdown de quantidade;" />
-    <option name="LAST_COMMIT_MESSAGE" value="[DEV] Front-end&#10;- Refatora local de arquivos;&#10;- Adicona página de carrinho;&#10;- Adiciona botão adicionar ao carrinho e dropdown de quantidade;" />
+    <MESSAGE value="[DEV] Front-end e Back-end&#10;&#10;- FRONT: Altera card de produtos e implementa página de carrinho;&#10;- BACK: Adicionar carrinho controller, service, model e repository;&#10;- BACK: Implementa exclusão de carrinho se for deletar um produto que esteja no carrinho;" />
+    <option name="LAST_COMMIT_MESSAGE" value="[DEV] Front-end e Back-end&#10;&#10;- FRONT: Altera card de produtos e implementa página de carrinho;&#10;- BACK: Adicionar carrinho controller, service, model e repository;&#10;- BACK: Implementa exclusão de carrinho se for deletar um produto que esteja no carrinho;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/back/src/main/java/com/ecommerce/back/controller/CompraController.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

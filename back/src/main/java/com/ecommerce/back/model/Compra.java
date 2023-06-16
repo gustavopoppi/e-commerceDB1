@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Carrinho {
+public class Compra {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,9 +22,6 @@ public class Carrinho {
     @Column(name = "valor_total")
     private Double valorTotal;
 
-    @Enumerated(EnumType.STRING)
-    private StatusCarrinho status;
-
     @ManyToOne()
-    private Produto produto;
+    Produto produto;
 }

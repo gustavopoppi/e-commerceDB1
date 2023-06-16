@@ -2,8 +2,10 @@ package com.ecommerce.back.service;
 
 import com.ecommerce.back.dto.DadosProduto;
 import com.ecommerce.back.model.Carrinho;
+import com.ecommerce.back.model.Compra;
 import com.ecommerce.back.model.Produto;
 import com.ecommerce.back.repository.CarrinhoRepository;
+import com.ecommerce.back.repository.CompraRepository;
 import com.ecommerce.back.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +21,9 @@ public class ProdutoService {
 
     @Autowired
     ProdutoRepository produtoRepository;
+
+    @Autowired
+    CompraRepository compraRepository;
 
     public List<Produto> listaTodosProdutos() {
         return produtoRepository.findAll();
@@ -49,8 +54,10 @@ public class ProdutoService {
     public void excluirProduto(Long id) {
         if (produtoEstaNoCarrinho(id)) {
             findProdutoNoCarrinho(id).forEach(produto -> carrinhoRepository.delete(produto));
-            produtoRepository.delete(buscaProduto(id));
+            findCompraByProdutoId(id).forEach(compra -> compraRepository.delete(compra));
         }
+
+        produtoRepository.delete(buscaProduto(id));
     }
 
     public Produto detalhaFuncionario(Long id) {
@@ -72,5 +79,9 @@ public class ProdutoService {
 
     private List<Carrinho> findProdutoNoCarrinho(Long id) {
         return carrinhoRepository.findAll().stream().filter(carrinho -> carrinho.getProduto().getId().equals(id)).collect(Collectors.toList());
+    }
+
+    private List<Compra> findCompraByProdutoId(Long id) {
+        return compraRepository.findByProdutoId(id);
     }
 }
