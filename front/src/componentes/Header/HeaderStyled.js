@@ -6,6 +6,22 @@ export const HeaderContainer = styled.header`
     color: #fff;
     display: flex;    
 
+    .cart-icon {
+        position: relative;
+        display: inline-block;
+    }
+
+    .cart-count {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: red;
+        color: white;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 12px;
+    }
+
     .container{           
         padding: 5px 20px;
         display: flex;

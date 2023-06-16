@@ -63,7 +63,7 @@ function CardProdutos() {
                             <select onChange={event => handleSelectChange(event, produto)} name="" id="">
                                 {getQuantidadeEstoqueProduto(produto)}
                             </select>&nbsp;
-                            <Link to={'/carrinho/'}><button onClick={() => adicionarCarrinho(produto)} className='btn btn-warning btn-sm'>Adicionar ao carrinho</button></Link>
+                            <button onClick={() => adicionarCarrinho(produto)} className='btn btn-warning btn-sm'>Adicionar ao carrinho</button>
                         </div>
                         <div>
                             <Link to={'/produto/' + produto.id}><button className='btn btn-primary btn-sm'>Alterar</button>&nbsp;</Link>
